@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "uzlabo-web-v2"
+    }
+  },
+  "defaultProject": "uzlabo-web-v2",
+  "cli": {
+    "analytics": "c5935cfd-690b-4eef-ad1b-4b355dd1ce61"
+  }
 }
