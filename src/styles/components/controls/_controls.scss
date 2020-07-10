@@ -1,0 +1,152 @@
+.ctrl {
+  display: inline-block;
+  font-family: $ctrl-font-family;
+  font-weight: $ctrl-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $ctrl-border-width solid transparent;
+  @include button-size($ctrl-padding-y, $ctrl-padding-x, $ctrl-font-size, $ctrl-line-height, $ctrl-border-radius);
+  @include transition($ctrl-transition);
+
+  @include hover {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $ctrl-disabled-opacity;
+    @include box-shadow(none);
+    cursor: $disabled-cursor;
+
+    * {
+      pointer-events: none;
+      cursor: $disabled-cursor;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    &:active,
+    &.active {
+      @include box-shadow(none);
+
+      &:focus {
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  &.active {
+    cursor: default;
+  }
+
+  .material-icons {
+    font-size: inherit;
+  }
+
+  &-sm {
+    @include button-size($ctrl-padding-y-sm, $ctrl-padding-x-sm, $ctrl-font-size-sm, $ctrl-line-height-sm, $ctrl-border-radius);
+  }
+
+  &-lg {
+    @include button-size($ctrl-padding-y-lg, $ctrl-padding-x-lg, $ctrl-font-size-lg, $ctrl-line-height-lg, $ctrl-border-radius);
+  }
+
+}
+
+@mixin control-variant($color, $color-hover: darken($color, 15%), $active-background: transparent, $color-active: darken($color, 15%), $color-disabled: $gray-90) {
+  color: $color;
+
+  @include hover {
+    color: $color-hover;
+  }
+
+  &:focus,
+  &.focus {
+    @include box-shadow(none);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color-disabled;
+    background-color: transparent;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $color-active;
+    background-color: $active-background;
+
+    &:focus {
+
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $ctrl-active-box-shadow !=none {
+        @include box-shadow(none);
+      }
+
+      @else {
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .ctrl-#{$color} {
+    @include control-variant($value);
+  }
+}
+
+// Make a control look and behave like a link
+.ctrl-link {
+  font-weight: $font-weight-base;
+  color: $link-color;
+  text-decoration: $link-decoration;
+  user-select: auto;
+  vertical-align: baseline;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    @include box-shadow(none);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $ctrl-link-disabled-color;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    &:active,
+    &.active {
+      @include box-shadow(none);
+
+      &:hover,
+      &:focus,
+      &.focus {
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  // No need for an active state here
+}

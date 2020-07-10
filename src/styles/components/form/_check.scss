@@ -1,0 +1,69 @@
+$componentSelector: check;
+$labelSelector: #{$componentSelector}-label;
+
+.#{$componentSelector} {
+  &-input {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    + .#{$labelSelector} {
+      display: inline-block;
+      padding-top: $check-label-padding-top;
+      padding-left: $check-label-padding-left;
+      cursor: pointer;
+      color: $check-label-color;
+      font-size: $check-label-font-size;
+      font-weight: $check-label-font-weight;
+      line-height: $check-label-line-height;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $check-input-size;
+        height: $check-input-size;
+        background: $check-input-bg;
+        border: $check-input-border-width solid $check-input-border-color;
+        border-radius: $check-input-border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:checked {
+      + .#{$labelSelector} {
+        &:before {
+          @include icon($check-input-ico);
+          background: $check-input-bg-checked;
+          border-color: $check-input-border-color-checked;
+          color: $check-input-ico-color-checked;
+          font-size: $check-input-ico-color-size;
+        }
+      }
+    }
+
+    &:disabled {
+      + .#{$labelSelector} {
+        cursor: $disabled-cursor;
+        &:before {
+          background: $check-input-bg-disabled;
+        }
+      }
+
+      &:checked {
+        + .#{$labelSelector} {
+          &:before {
+            background: $check-input-bg-disabled;
+            border-color: $check-input-border-color-disabled;
+          }
+        }
+      }
+    }
+  }
+}

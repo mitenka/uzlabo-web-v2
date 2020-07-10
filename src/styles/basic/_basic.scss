@@ -1,0 +1,20 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  background: $body-bg;
+  font-family: $font-family-base;
+}
+
+.container-width {
+  width: 100%;
+  @include margin-x(auto);
+
+  @each $breakpoint,
+  $value in $max-widths {
+    &.-#{$breakpoint} {
+      max-width: $value !important;
+    }
+  }
+}

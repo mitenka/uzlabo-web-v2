@@ -1,0 +1,232 @@
+$componentSelector: mbs-button;
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+  @include box-shadow(none);
+
+  @include hover-focus {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &.active {
+    cursor: default;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+    cursor: $disabled-cursor;
+
+    * {
+      pointer-events: none;
+      cursor: $disabled-cursor;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    &:active,
+    &.active {
+      @include box-shadow($btn-active-box-shadow);
+
+      &:focus {
+        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
+    }
+  }
+
+  .material-icons {
+    font-size: inherit;
+  }
+
+  &-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  }
+
+  &-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  }
+}
+
+@mixin button-variant(
+  $background,
+  $hover-background: darken($background, 7.5%),
+  $active-background: darken($background, 10%),
+  $disabled-background: $btn-disabled-bg,
+  $disabled-color: $btn-disabled-color
+) {
+  color: color-yiq($background);
+  background: $background;
+  border-color: $background;
+  @include box-shadow($btn-box-shadow);
+
+  @include hover-focus {
+    color: color-yiq($hover-background);
+    @include gradient-bg($hover-background);
+    border-color: $hover-background;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: $disabled-color;
+    background-color: $disabled-background;
+    border-color: $disabled-background;
+
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-background;
+
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value);
+  }
+}
+
+// Button outline variants
+@mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color, $disabled-color: $btn-disabled-bg) {
+  color: $color;
+  border-color: $color;
+
+  @include hover-focus {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $disabled-color;
+    background-color: transparent;
+    border-color: $disabled-color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+  user-select: auto;
+
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      box-shadow: none;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  // No need for an active state here
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+.nav {
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-link {
+    display: block;
+    width: 100%;
+    font-size: $nav-link-font-size;
+    font-weight: $nav-link-font-weight;
+    color: $nav-link-color;
+    border: 0;
+    background: 0;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $nav-link-hover-color;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

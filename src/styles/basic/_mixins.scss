@@ -1,0 +1,48 @@
+@mixin margin-y($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin margin-x($value) {
+  margin-right: $value;
+  margin-left: $value;
+}
+
+@mixin margin($value) {
+  margin-top: $value;
+  margin-right: $value;
+  margin-bottom: $value;
+  margin-left: $value;
+}
+
+@mixin padding-y($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin padding-x($value) {
+  padding-right: $value;
+  padding-left: $value;
+}
+
+@mixin padding($value) {
+  padding-top: $value;
+  padding-right: $value;
+  padding-bottom: $value;
+  padding-left: $value;
+}
+
+@mixin icon($content, $fontWeight: normal) {
+  font-family: 'Material Icons';
+  font-weight: $fontWeight;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  content: $content;
+}

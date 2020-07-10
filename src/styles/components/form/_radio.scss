@@ -1,0 +1,68 @@
+$componentSelector: radio;
+$labelSelector: #{$componentSelector}-label;
+
+.#{$componentSelector} {
+  &-input {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    + .#{$labelSelector} {
+      display: inline-block;
+      padding-top: $radio-label-padding-top;
+      padding-left: $radio-label-padding-left;
+      cursor: pointer;
+      color: $radio-label-color;
+      font-size: $radio-label-font-size;
+      font-weight: $radio-label-font-weight;
+      line-height: $radio-label-line-height;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $radio-input-size;
+        height: $radio-input-size;
+        background: $radio-input-bg;
+        border: $radio-input-border-width solid $radio-input-border-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:checked {
+      + .#{$labelSelector} {
+        &:before {
+          background: $radio-input-bg-checked;
+          border-color: $radio-input-border-color-checked;
+          box-shadow: inset 0 0 0 $radio-input-inset-shadow-size $radio-input-inset-shadow-color-checked;
+        }
+      }
+    }
+
+    &:disabled {
+      + .#{$labelSelector} {
+        cursor: $disabled-cursor;
+        &:before {
+          background: $radio-input-bg-disabled;
+          border-color: $radio-input-border-color-disabled;
+        }
+      }
+
+      &:checked {
+        + .#{$labelSelector} {
+          &:before {
+            background: $radio-input-bg-disabled;
+            border-color: $radio-input-border-color-disabled;
+          }
+        }
+      }
+    }
+  }
+}

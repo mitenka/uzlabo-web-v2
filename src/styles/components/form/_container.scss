@@ -1,0 +1,49 @@
+$componentSelector: input-container;
+
+.#{$componentSelector} {
+  position: relative;
+
+  .form-control {
+    padding-right: $input-container-input-padding-right;
+    position: relative;
+    z-index: 10;
+
+    + .#{$componentSelector}_ico {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $input-container-ico-width;
+      height: $input-container-ico-height;
+      font-size: $input-container-ico-size;
+      position: absolute;
+      top: $input-border-width;
+      right: $input-border-width;
+      z-index: 20;
+
+      .ctrl {
+        font-size: inherit;
+        line-height: 0;
+      }
+    }
+
+    &-sm {
+      padding-right: $input-container-input-padding-right-sm;
+
+      + .#{$componentSelector}_ico {
+        width: $input-container-ico-width-sm;
+        height: $input-container-ico-height-sm;
+        font-size: $input-container-ico-size-sm;
+      }
+    }
+
+    &-lg {
+      padding-right: $input-container-input-padding-right-lg;
+
+      + .#{$componentSelector}_ico {
+        width: $input-container-ico-width-lg;
+        height: $input-container-ico-height-lg;
+        font-size: $input-container-ico-size-lg;
+      }
+    }
+  }
+}

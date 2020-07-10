@@ -1,0 +1,21 @@
+.valid-feedback,
+.invalid-feedback {
+  font-weight: $form-feedback-font-weight;
+
+  .material-icons {
+    margin-right: $form-feedback-icon-size-margin-right;
+    font-size: $form-feedback-icon-size;
+  }
+}
+
+.was-validated {
+  :valid,
+  :invalid {
+    ~ .valid-feedback,
+    ~ .invalid-feedback {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+  }
+}

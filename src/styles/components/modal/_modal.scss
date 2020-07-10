@@ -1,0 +1,38 @@
+.modal {
+  &-content {
+    padding-top: $modal-content-padding-top;
+    padding-bottom: $modal-content-padding-bottom;
+  }
+
+  &-header {
+    display: block;
+    padding: $modal-header-padding-y $modal-header-padding-x;
+
+    &_controls {
+      line-height: 1;
+    }
+
+    &_description {
+      margin-top: $modal-header-description-margin-top;
+      color: $modal-header-description-color;
+    }
+  }
+
+  &-body {
+    padding: $modal-body-padding-top $modal-body-padding-x
+      $modal-body-padding-bottom;
+  }
+
+  &-footer {
+    display: block;
+    padding: $modal-footer-padding-y $modal-footer-padding-x;
+
+    > * {
+      margin: unset;
+    }
+  }
+
+  &-close {
+    font-size: $modal-close-font-size;
+  }
+}
