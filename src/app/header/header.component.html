@@ -1,1 +1,397 @@
-header
+<div class="header">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-width -xl">
+      <div class="row no-gutters navbar-inner align-items-center justify-content-between">
+
+        <div class="col-auto">
+          <a class="navbar-brand" routerLink="/">
+            Uzlabo
+          </a>
+        </div>
+
+        <div class="col-auto">
+          <button class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  (click)="isNavbarCollapsed = !isNavbarCollapsed">
+            <span class="material-icons">
+              menu
+            </span>
+          </button>
+        </div>
+
+        <div class="col-auto">
+          <div [ngbCollapse]="isNavbarCollapsed"
+               class="collapse navbar-collapse"
+               id="navbarSupportedContent">
+
+            <ul class="navbar-nav row justify-content-end align-items-center">
+              <li class="nav-item col-auto">
+                <a routerLink="/ideas" routerLinkActive="active"
+                   class="btn btn-outline-primary">
+                  Pitch an idea
+                </a>
+              </li>
+              <li class="nav-item col-auto">
+                <a routerLink="/ideas" routerLinkActive="active"
+                   class="nav-link">
+                  Explore ideas
+                </a>
+              </li>
+              <li class="nav-item col-auto">
+                <a routerLink="/about" routerLinkActive="active"
+                   class="nav-link">
+                  About
+                </a>
+              </li>
+              <li class="nav-item col-auto">
+                <a routerLink="/showcase" routerLinkActive="active"
+                   class="nav-link">
+                  Showcase
+                </a>
+              </li>
+              <li class="nav-item col-auto">
+                <button class="nav-link"
+                        (click)="open(signInModal)">
+                  Sign in
+                </button>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+<ng-template #signInModal
+             let-modal>
+  <header class="modal-header">
+    <div class="row justify-content-end modal-header_controls">
+      <div class="col-auto">
+        <button type="button"
+                class="ctrl ctrl-dark modal-close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="modal-title">
+          Ienākt
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-outline-light btn-block">
+              <span class="text-base">
+                Facebook profilu
+              </span>
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-outline-light btn-block">
+              <span class="text-base">
+                Google profilu
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label"
+               for="signInEmail">
+          E-pasts
+        </label>
+        <input type="email"
+               class="form-control"
+               id="signInEmail"
+               aria-describedby="emailHelp" />
+      </div>
+      <div class="form-group">
+        <label class="form-label"
+               for="signInParole">
+          Parole
+        </label>
+        <div class="input-container">
+          <input type="password"
+                 class="form-control"
+                 id="signInParole">
+          <div class="input-container_ico">
+            <button class="ctrl ctrl-secondary">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer class="modal-footer">
+    <div class="modal-footer-inner">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto">
+          <button class="ctrl ctrl-link"
+                  (click)="open(passwordModal); modal.dismiss()">
+            Aizmirsi paroli?
+          </button>
+        </div>
+        <div class="col-auto">
+          <button type="submit"
+                  class="btn btn-primary"
+                  (click)="modal.close('Save click'); open(confirmModal)">
+            Ienākt
+          </button>
+        </div>
+      </div>
+      <div class="row pt-4 justify-content-center">
+        <div class="col-auto text-dark">
+          Nav lietotāja konta?
+          <button class="ctrl ctrl-link"
+                  (click)="open(signUpModal); modal.dismiss()">
+            Reģistrējies tagad
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</ng-template>
+
+<ng-template #passwordModal
+             let-modal>
+  <header class="modal-header">
+    <div class="row justify-content-end modal-header_controls">
+      <div class="col-auto">
+        <button type="button"
+                class="ctrl ctrl-dark modal-close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="modal-title">
+          Aizmirsi paroli?
+        </h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 modal-header_description text-center">
+        Ievadi savu e-pasta adresi, un mēs nosūtīsim tev saiti paroles atjaunošanai
+      </div>
+    </div>
+  </header>
+
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label class="form-label"
+               for="passwordEmail">
+          E-pasts
+        </label>
+        <input type="email"
+               class="form-control"
+               id="passwordEmail"
+               aria-describedby="emailHelp" />
+      </div>
+    </form>
+  </div>
+
+  <footer class="modal-footer">
+    <div class="modal-footer-inner">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto">
+          <button class="ctrl ctrl-link"
+                  (click)="open(signInModal); modal.dismiss()">
+            Atpakaļ
+          </button>
+        </div>
+        <div class="col-auto">
+          <button type="submit"
+                  class="btn btn-primary"
+                  (click)="modal.close('Save click')">
+            Atjaunot paroli
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</ng-template>
+
+<ng-template #signUpModal
+             let-modal>
+  <header class="modal-header">
+    <div class="row justify-content-end modal-header_controls">
+      <div class="col-auto">
+        <button type="button"
+                class="ctrl ctrl-dark modal-close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="modal-title">
+          Reģistrēties
+        </h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 modal-header_description text-center">
+        Ienākt ar
+      </div>
+    </div>
+  </header>
+
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-outline-light btn-block">
+              <span class="text-base">
+                Facebook profilu
+              </span>
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-outline-light btn-block">
+              <span class="text-base">
+                Google profilu
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label"
+               for="signUpName">
+          Vārds
+        </label>
+        <input type="text"
+               class="form-control"
+               id="signUpName"
+               aria-describedby="emailHelp" />
+      </div>
+      <div class="form-group">
+        <label class="form-label"
+               for="signUpEmail">
+          E-pasts
+        </label>
+        <input type="email"
+               class="form-control"
+               id="signUpEmail"
+               aria-describedby="emailHelp" />
+      </div>
+      <div class="form-group">
+        <label class="form-label"
+               for="signUpParole">
+          Parole
+        </label>
+        <div class="input-container">
+          <input type="password"
+                 class="form-control"
+                 id="signUpParole">
+          <div class="input-container_ico">
+            <button class="ctrl ctrl-secondary">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="check">
+          <input class="check-input"
+                 type="checkbox"
+                 id="signUpTerms" />
+          <label class="check-label"
+                 for="signUpTerms">
+            Piekrītu
+            <a href="#">
+              Lietošanas noteikumiem
+            </a>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer class="modal-footer">
+    <div class="modal-footer-inner">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-auto">
+          <button class="ctrl ctrl-link"
+                  (click)="open(signInModal); modal.dismiss()">
+            Ienāc šeit
+          </button>
+        </div>
+        <div class="col-auto">
+          <button type="submit"
+                  class="btn btn-primary"
+                  disabled
+                  (click)="modal.close('Save click')">
+            Reģistrēties
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</ng-template>
+
+<ng-template #confirmModal
+             let-modal>
+  <header class="modal-header">
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <h2 class="modal-title">
+          Pārbaudi sava e-pasta iesūtni!
+        </h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 modal-header_description text-center">
+        Mēs tev nosūtījām ziņu e-pastā. Pārbaudi sava e-pasta iesūtni un klikšķini uz atsūtītās saites
+      </div>
+    </div>
+  </header>
+
+  <footer class="modal-footer mt-4">
+    <div class="modal-footer-inner">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button type="submit"
+                  class="btn btn-primary"
+                  (click)="modal.dismiss('Close click')">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</ng-template>
