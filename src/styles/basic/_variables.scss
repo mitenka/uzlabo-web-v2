@@ -224,7 +224,7 @@ $grid-breakpoints: (
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 $container-min-width: map.get($grid-breakpoints, "sm");
-
+$container-padding-x: $spacer;
 
 // Grid containers
 //
@@ -800,6 +800,9 @@ $zindex-tooltip:                    1070;
 
 // Navs
 
+$nav-item-padding-y: 0.5rem;
+$nav-item-padding-y-md: 0;
+
 $nav-link-padding-y:                0;
 $nav-link-padding-x:                0.36rem;
 $nav-link-color: $base;
@@ -827,7 +830,7 @@ $nav-divider-margin-y:              $spacer / 2;
 // Navbar
 
 $navbar-padding-y:                  $spacer / 2;
-$navbar-padding-x:                  $spacer;
+$navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         0.36rem;
 

@@ -1,13 +1,13 @@
 .nav {
   &-item {
-    @include padding-y(0.5rem);
+    @include padding-y($nav-item-padding-y);
 
     @include media-breakpoint-up(md) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      @include padding-y(0);
+      @include padding-y($nav-item-padding-y-md);
     }
   }
 

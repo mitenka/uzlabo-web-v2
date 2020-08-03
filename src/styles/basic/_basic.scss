@@ -10,7 +10,9 @@ body {
 
 .container-width {
   width: 100%;
+  min-width: $container-min-width;
   @include margin-x(auto);
+  @include padding-x($container-padding-x);
 
   @each $breakpoint,
   $value in $max-widths {
