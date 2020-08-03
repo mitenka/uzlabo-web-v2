@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -220,6 +222,8 @@ $grid-breakpoints: (
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+$container-min-width: map.get($grid-breakpoints, "sm");
 
 
 // Grid containers
@@ -507,7 +511,8 @@ $btn-padding-x-lg:            3rem;
 $btn-font-size-lg:            1.5rem;
 $btn-line-height-lg:          $input-btn-line-height-lg;
 
-$btn-border-width:           2px;
+$btn-border-width:            2px;
+$btn-border-width-light:      1px;
 
 $btn-font-weight:             600;
 $btn-box-shadow:              none;
@@ -1088,7 +1093,7 @@ $modal-close-font-size: 1.75rem;
 
 $modal-xl:                          1140px;
 $modal-lg:                          800px;
-$modal-md:                          500px;
+$modal-md:                          540px;
 $modal-sm:                          300px;
 
 $modal-fade-transform:              translate(0, -50px);

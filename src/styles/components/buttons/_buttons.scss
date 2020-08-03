@@ -63,6 +63,10 @@
   &-lg {
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
   }
+
+  &.-light {
+    border-width: $btn-border-width-light;
+  }
 }
 
 @mixin button-variant(

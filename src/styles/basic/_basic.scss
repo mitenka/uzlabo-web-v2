@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  min-width: $container-min-width;
   background: $body-bg;
   font-family: $font-family-base;
 }
