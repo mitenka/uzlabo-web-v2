@@ -4,8 +4,11 @@
       <div class="row no-gutters navbar-inner align-items-center justify-content-between">
 
         <div class="col-11 col-md-auto">
-          <a class="navbar-brand" routerLink="/">
-            Uzlabo
+          <a class="navbar-brand"
+             routerLink="/">
+            <img src="/assets/images/logo-uzlabo.svg"
+                 alt="Uzlabo"
+                 class="navbar-logo" />
           </a>
         </div>
 
@@ -31,25 +34,30 @@
 
             <ul class="navbar-nav row justify-content-md-end align-items-md-center">
               <li class="nav-item col-auto">
-                <a routerLink="/ideas/new" routerLinkActive="active"
+                <a routerLink="/ideas/new"
+                   routerLinkActive="active"
                    class="btn btn-outline-primary">
                   Pitch an idea
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/ideas" routerLinkActive="active"
-                   [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                <a routerLink="/ideas"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }"
+                   class="nav-link">
                   Explore ideas
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/about" routerLinkActive="active"
+                <a routerLink="/about"
+                   routerLinkActive="active"
                    class="nav-link">
                   About
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/showcase" routerLinkActive="active"
+                <a routerLink="/showcase"
+                   routerLinkActive="active"
                    class="nav-link">
                   Showcase
                 </a>
