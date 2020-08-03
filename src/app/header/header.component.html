@@ -3,13 +3,13 @@
     <div class="container-width -xl">
       <div class="row no-gutters navbar-inner align-items-center justify-content-between">
 
-        <div class="col-auto">
+        <div class="col-11 col-md-auto">
           <a class="navbar-brand" routerLink="/">
             Uzlabo
           </a>
         </div>
 
-        <div class="col-auto">
+        <div class="col-1 d-md-none text-right">
           <button class="navbar-toggler"
                   type="button"
                   data-toggle="collapse"
@@ -24,12 +24,12 @@
           </button>
         </div>
 
-        <div class="col-auto">
+        <div class="col-12 col-md-auto">
           <div [ngbCollapse]="isNavbarCollapsed"
                class="collapse navbar-collapse"
                id="navbarSupportedContent">
 
-            <ul class="navbar-nav row justify-content-end align-items-center">
+            <ul class="navbar-nav row justify-content-md-end align-items-md-center">
               <li class="nav-item col-auto">
                 <a routerLink="/ideas/new" routerLinkActive="active"
                    class="btn btn-outline-primary">
