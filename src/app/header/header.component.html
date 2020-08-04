@@ -3,13 +3,16 @@
     <div class="container-width -xl">
       <div class="row no-gutters navbar-inner align-items-center justify-content-between">
 
-        <div class="col-auto">
-          <a class="navbar-brand" routerLink="/">
-            Uzlabo
+        <div class="col-11 col-md-auto">
+          <a class="navbar-brand"
+             routerLink="/">
+            <img src="/assets/images/logo-uzlabo.svg"
+                 alt="Uzlabo"
+                 class="navbar-logo" />
           </a>
         </div>
 
-        <div class="col-auto">
+        <div class="col-1 d-md-none text-right">
           <button class="navbar-toggler"
                   type="button"
                   data-toggle="collapse"
@@ -24,32 +27,37 @@
           </button>
         </div>
 
-        <div class="col-auto">
+        <div class="col-12 col-md-auto">
           <div [ngbCollapse]="isNavbarCollapsed"
                class="collapse navbar-collapse"
                id="navbarSupportedContent">
 
-            <ul class="navbar-nav row justify-content-end align-items-center">
+            <ul class="navbar-nav row justify-content-md-end align-items-md-center">
               <li class="nav-item col-auto">
-                <a routerLink="/ideas/new" routerLinkActive="active"
+                <a routerLink="/ideas/new"
+                   routerLinkActive="active"
                    class="btn btn-outline-primary">
                   Pitch an idea
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/ideas" routerLinkActive="active"
-                   [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+                <a routerLink="/ideas"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }"
+                   class="nav-link">
                   Explore ideas
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/about" routerLinkActive="active"
+                <a routerLink="/about"
+                   routerLinkActive="active"
                    class="nav-link">
                   About
                 </a>
               </li>
               <li class="nav-item col-auto">
-                <a routerLink="/showcase" routerLinkActive="active"
+                <a routerLink="/showcase"
+                   routerLinkActive="active"
                    class="nav-link">
                   Showcase
                 </a>
@@ -97,15 +105,21 @@
       <div class="form-group">
         <div class="row">
           <div class="col-6">
-            <button class="btn btn-outline-light btn-block">
+            <button class="btn btn-outline-light btn-block -light">
               <span class="text-base">
+                <img src="/assets/images/logo-facebook.svg"
+                     alt="Facebook profilu"
+                     class="mr-1" />
                 Facebook profilu
               </span>
             </button>
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-light btn-block">
+            <button class="btn btn-outline-light btn-block -light">
               <span class="text-base">
+                <img src="/assets/images/logo-google.svg"
+                     alt="Google profilu"
+                     class="mr-1" />
                 Google profilu
               </span>
             </button>
@@ -270,15 +284,21 @@
       <div class="form-group">
         <div class="row">
           <div class="col-6">
-            <button class="btn btn-outline-light btn-block">
+            <button class="btn btn-outline-light btn-block -light">
               <span class="text-base">
+                <img src="/assets/images/logo-facebook.svg"
+                     alt="Facebook profilu"
+                     class="mr-1" />
                 Facebook profilu
               </span>
             </button>
           </div>
           <div class="col-6">
-            <button class="btn btn-outline-light btn-block">
+            <button class="btn btn-outline-light btn-block -light">
               <span class="text-base">
+                <img src="/assets/images/logo-google.svg"
+                     alt="Facebook profilu"
+                     class="mr-1" />
                 Google profilu
               </span>
             </button>

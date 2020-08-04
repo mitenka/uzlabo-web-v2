@@ -1,10 +1,14 @@
 .nav {
-
   &-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include padding-y($nav-item-padding-y);
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include padding-y($nav-item-padding-y-md);
+    }
   }
 
   &-link {
@@ -15,6 +19,7 @@
     color: $nav-link-color;
     border: 0;
     background: 0;
+    text-align: left;
 
     &:hover,
     &:focus,
@@ -22,6 +27,10 @@
       color: $nav-link-hover-color;
       box-shadow: none;
       outline: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
     }
   }
 }

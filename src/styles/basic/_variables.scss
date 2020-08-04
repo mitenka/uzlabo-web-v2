@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -221,6 +223,8 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
+$container-min-width: map.get($grid-breakpoints, "sm");
+$container-padding-x: $spacer;
 
 // Grid containers
 //
@@ -507,7 +511,8 @@ $btn-padding-x-lg:            3rem;
 $btn-font-size-lg:            1.5rem;
 $btn-line-height-lg:          $input-btn-line-height-lg;
 
-$btn-border-width:           2px;
+$btn-border-width:            2px;
+$btn-border-width-light:      1px;
 
 $btn-font-weight:             600;
 $btn-box-shadow:              none;
@@ -795,6 +800,9 @@ $zindex-tooltip:                    1070;
 
 // Navs
 
+$nav-item-padding-y: 0.5rem;
+$nav-item-padding-y-md: 0;
+
 $nav-link-padding-y:                0;
 $nav-link-padding-x:                0.36rem;
 $nav-link-color: $base;
@@ -822,7 +830,7 @@ $nav-divider-margin-y:              $spacer / 2;
 // Navbar
 
 $navbar-padding-y:                  $spacer / 2;
-$navbar-padding-x:                  $spacer;
+$navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         0.36rem;
 
@@ -1088,7 +1096,7 @@ $modal-close-font-size: 1.75rem;
 
 $modal-xl:                          1140px;
 $modal-lg:                          800px;
-$modal-md:                          500px;
+$modal-md:                          540px;
 $modal-sm:                          300px;
 
 $modal-fade-transform:              translate(0, -50px);
