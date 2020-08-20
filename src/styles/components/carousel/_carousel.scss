@@ -44,20 +44,20 @@
           display: flex;
           align-items: flex-end;
           flex-shrink: 0;
-          width: 436px;
+          width: $carousel-main-image-width;
           align-self: flex-end;
 
           @include media-breakpoint-down(md) {
             width: 100%;
-            max-width: 320px;
+            max-width: $carousel-main-image-width-sm;
           }
         }
 
       }
 
       &-caption {
-        margin-left: -4.8rem;
-        @include padding-y(1.8rem);
+        margin-left: $carousel-main-caption-offset;
+        @include padding-y($carousel-main-caption-padding-y);
         text-align: left;
         position: static;
 
