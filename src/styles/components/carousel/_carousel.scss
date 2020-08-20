@@ -1,0 +1,71 @@
+.carousel {
+
+  &:focus,
+  &:hover {
+    border: 0;
+    outline: 0;
+  }
+
+  // Main page carousel
+  &-main {
+
+    .carousel{
+      &-inner {
+        padding-top: $carousel-main-padding-top;
+        @include padding-x($carousel-main-padding-x);
+        background: $carousel-main-bg;
+        border-radius: $carousel-main-border-radius;
+
+        &:focus,
+        &:hover {
+          border: 0;
+          outline: 0;
+        }
+      }
+
+      &-item {
+        align-items: flex-start;
+
+        &.active {
+          display: flex;
+        }
+
+        @include media-breakpoint-down(md) {
+          flex-wrap: wrap;
+        }
+      }
+
+      &-pic {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+
+        &_wrapper {
+          display: flex;
+          align-items: flex-end;
+          flex-shrink: 0;
+          width: 436px;
+          align-self: flex-end;
+
+          @include media-breakpoint-down(md) {
+            width: 100%;
+            max-width: 320px;
+          }
+        }
+
+      }
+
+      &-caption {
+        margin-left: -4.8rem;
+        @include padding-y(1.8rem);
+        text-align: left;
+        position: static;
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

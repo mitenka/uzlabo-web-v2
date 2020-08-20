@@ -12,7 +12,8 @@
             Vai Tev ir ideja, kā uzlabot vidi kādā no Rīgas apkaimēm?
           </p>
           <p class="text-lg">
-            Iesniedz savu priekšlikumu, savāc atbalstītājus un palīdzi to realizēt!
+            Iesniedz savu priekšlikumu, savāc atbalstītājus un palīdzi to
+            realizēt!
           </p>
           <p class="text-primary">
             Šobrīd testējam platformu <br />
@@ -46,8 +47,8 @@
         </header>
         <div class="jumbotron-content">
           <h2>
-            Ja redzi interesantu veidu kā risināt eksistējošu problēmu Tavā pilsētā, neturi to pie sevis, iesniedz sava
-            risinājuma ideju
+            Ja redzi interesantu veidu kā risināt eksistējošu problēmu Tavā
+            pilsētā, neturi to pie sevis, iesniedz sava risinājuma ideju
           </h2>
         </div>
         <footer class="jumbotron-footer mt-3">
@@ -82,7 +83,8 @@
         </header>
         <div class="jumbotron-content">
           <h2>
-            Šobrīd testējam platformu VEF, Teikas, Sarkandaugavas, Imantas un Zolitūdes apkaimēs.
+            Šobrīd testējam platformu VEF, Teikas, Sarkandaugavas, Imantas un
+            Zolitūdes apkaimēs.
           </h2>
         </div>
         <footer class="jumbotron-footer mt-3">
@@ -107,8 +109,8 @@
         </header>
         <div>
           <h2>
-            lai to brīvi varētu izmantot ikviens jaunais uzņēmējs, programmētājs, pilsētas entuziasts vai pašvaldību
-            darbinieks.
+            lai to brīvi varētu izmantot ikviens jaunais uzņēmējs,
+            programmētājs, pilsētas entuziasts vai pašvaldību darbinieks.
           </h2>
         </div>
         <footer class="jumbotron-footer mt-3">
@@ -125,4 +127,81 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container-width -xl">
+  <div class="jumbotron py-9">
+    <section class="row align-items-center justify-content-between">
+      <div class="col-12 col-sm-4 col-md-6">
+        <header class="jumbotron-header">
+          <h4 class="jumbotron-title text-dark text-uppercase mb-0">
+            Draugi
+          </h4>
+        </header>
+      </div>
+      <div class="col-12 col-sm-8 col-md-6 mt-4 mt-sm-0">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-auto">
+            <a href="https://www.vefresh.com/"
+               target="_blank">
+              <img src="/assets/images/friends/vefresh.svg"
+                   alt="Vefresh" />
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://www.pilsetacilvekiem.lv/"
+               target="_blank">
+              <img src="/assets/images/friends/pilsetacilvekiem.svg"
+                   alt="Pilsēta cilvēkiem" />
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="http://www.sarkandaugavai.lv/"
+               target="_blank">
+              <img src="/assets/images/friends/sarkandaugavailv.svg"
+                   alt="Sarkandaugavai" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="container-width -xl py-9">
+  <ngb-carousel class="carousel-main">
+    <ng-template ngbSlide>
+      <div class="carousel-pic_wrapper">
+        <img [src]="images[0]"
+             alt=""
+             class="carousel-pic" />
+      </div>
+      <div class="carousel-caption">
+        <p class="h2 mb-3">
+          Ikdienas gaitās bieži vien redzam dažādas nepilnības mūsu apkārtējā vidē. Platforma uzlabo.lv aicina visus
+          Latvijas iedzīvotājus spert nākamo soli un iesaistīties risinājumu radīšanā!
+        </p>
+        <p class="h4">
+          VEFRESH team
+        </p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="carousel-pic_wrapper">
+        <img [src]="images[1]"
+             alt=""
+             class="carousel-pic" />
+      </div>
+      <div class="carousel-caption">
+        <p class="h2 mb-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <p class="h4">
+          Pilsēta cilvēkiem team
+        </p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
 </div>

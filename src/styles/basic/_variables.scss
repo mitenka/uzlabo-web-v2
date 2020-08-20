@@ -44,6 +44,7 @@ $red:     #F23563;
 $orange:  #fd7e14;
 $yellow:  #ffc107;
 $green:   #00B98D;
+$green-light: #3ed47a;
 $teal:    #2FC86C;
 $cyan:    #17a2b8;
 $semi-white: #F9FAFA;
@@ -372,19 +373,22 @@ $font-weight-bolder:          bolder;
 $font-weight-base:            500;
 $line-height-base:            1.43;
 
-$h1-font-size:                $font-size-base * 4.29;
+$h1-font-size:                $font-size-base * 4.29; // 60.06px
 $h1-line-height: 1.2;
 $h1-letter-spacing: 1px;
 
-$h2-font-size:                $font-size-base * 2;
+$h2-font-size:                $font-size-base * 2; // 28px
 $h2-line-height: 1.43;
 $h2-letter-spacing: .01em;
 
-$h3-font-size:                $font-size-base * 1.29;
+$h3-font-size:                $font-size-base * 1.29; // 18.06px
 $h3-line-height: 1.33;
 $h3-letter-spacing: .005em;
 
-$h4-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.14; // 15.96px
+$h4-font-weight: 500;
+$h4-line-height: 1.44;
+
 $h5-font-size:                $font-size-base * 1.25;
 $h6-font-size:                $font-size-base;
 
@@ -1202,7 +1206,7 @@ $breadcrumb-border-radius:          $border-radius;
 // Carousel
 
 $carousel-control-color:             $white;
-$carousel-control-width:             15%;
+$carousel-control-width:             10%;
 $carousel-control-opacity:           .5;
 $carousel-control-hover-opacity:     .9;
 $carousel-control-transition:        opacity .15s ease;
@@ -1217,7 +1221,7 @@ $carousel-indicator-transition:      opacity .6s ease;
 $carousel-caption-width:             70%;
 $carousel-caption-color:             $white;
 
-$carousel-control-icon-width:        20px;
+$carousel-control-icon-width:        40px;
 
 $carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='8' height='8' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/></svg>");
 $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' width='8' height='8' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>");
@@ -1225,6 +1229,10 @@ $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://
 $carousel-transition-duration:       .6s;
 $carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
+$carousel-main-border-radius: 5.7rem;
+$carousel-main-bg: linear-gradient(270deg, $green, $green-light);
+$carousel-main-padding-top: 6rem;
+$carousel-main-padding-x: 6rem;
 
 // Spinners
 
