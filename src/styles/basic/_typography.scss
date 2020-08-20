@@ -12,3 +12,15 @@ h3 {
   line-height: $h3-line-height;
   letter-spacing: $h3-letter-spacing;
 }
+
+.text {
+  &-md {
+    font-size: $font-size-base;
+  }
+  &-lg {
+    font-size: $font-size-lg;
+  }
+  &-sm {
+    font-size: $font-size-sm;
+  }
+}

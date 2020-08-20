@@ -161,7 +161,12 @@ $spacers: map-merge(
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    5: ($spacer * 2),
+    6: ($spacer * 3),
+    7: ($spacer * 4),
+    8: ($spacer * 5),
+    9: ($spacer * 6.5),
+    10: ($spacer * 8)
   ),
   $spacers
 );
@@ -355,7 +360,7 @@ $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem; // Set up for html "14px"
-$font-size-lg:                $font-size-base * 1.25;
+$font-size-lg:                $font-size-base * 1.286; // 18px
 $font-size-sm:                $font-size-base * .875;
 
 $font-weight-lighter:         lighter;
@@ -506,9 +511,9 @@ $btn-padding-x-sm:            1rem;
 $btn-font-size-sm:            .9rem;
 $btn-line-height-sm:          $input-btn-line-height-sm;
 
-$btn-padding-y-lg:            1rem;
-$btn-padding-x-lg:            3rem;
-$btn-font-size-lg:            1.5rem;
+$btn-padding-y-lg:            1.05rem;
+$btn-padding-x-lg:            2.6rem;
+$btn-font-size-lg:            1.29rem;
 $btn-line-height-lg:          $input-btn-line-height-lg;
 
 $btn-border-width:            2px;
@@ -932,9 +937,9 @@ $pagination-disabled-border-color:  $gray-300;
 
 // Jumbotron
 
-$jumbotron-padding:                 2rem;
+$jumbotron-padding:                 0;
 $jumbotron-color:                   null;
-$jumbotron-bg:                      $gray-200;
+$jumbotron-bg:                      $white;
 
 
 // Cards
