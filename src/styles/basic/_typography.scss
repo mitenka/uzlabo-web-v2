@@ -1,14 +1,35 @@
-h1 {
+h1,
+.h1 {
   line-height: $h1-line-height;
   letter-spacing: $h1-letter-spacing;
 }
 
-h2 {
+h2,
+.h2 {
   line-height: $h2-line-height;
   letter-spacing: $h2-letter-spacing;
 }
 
-h3 {
+h3,
+.h3 {
   line-height: $h3-line-height;
   letter-spacing: $h3-letter-spacing;
+}
+
+h4,
+.h4 {
+  font-weight: $h4-font-weight;
+  line-height: $h4-line-height;
+}
+
+.text {
+  &-md {
+    font-size: $font-size-base;
+  }
+  &-lg {
+    font-size: $font-size-lg;
+  }
+  &-sm {
+    font-size: $font-size-sm;
+  }
 }
