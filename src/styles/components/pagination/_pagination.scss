@@ -1,0 +1,16 @@
+.pagination {
+  @include margin-x(-$pagination-item-padding-x);
+  align-items: center;
+
+  .page {
+    &-item {
+      @include padding-x($pagination-item-padding-x);
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $pagination-link-border-radius;
+    }
+  }
+}

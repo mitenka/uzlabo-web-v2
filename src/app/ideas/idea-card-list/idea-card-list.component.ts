@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './idea-card-list.component.html',
 })
 export class IdeaCardListComponent implements OnInit {
+  showOption = 2;
   options = [
     { id: 1, name: 'First added' },
     { id: 2, name: 'Last added' },
@@ -81,6 +82,15 @@ export class IdeaCardListComponent implements OnInit {
     { id: 3, name: 'Ielas un ietves' },
     { id: 4, name: 'Satiksmes organizācija' },
     { id: 6, name: 'Pilsētas ainava' },
+  ];
+
+  showItem = 10;
+  items = [
+    { id: 10, name: '10'},
+    { id: 25, name: '25'},
+    { id: 50, name: '50'},
+    { id: 100, name: '100'},
+    { id: 'All', name: 'All'},
   ];
 
   ngOnInit() {}

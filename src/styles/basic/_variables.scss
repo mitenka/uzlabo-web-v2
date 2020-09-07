@@ -364,6 +364,7 @@ $font-family-base:            $font-family-sans-serif;
 $font-size-base:              1rem; // Set up for html "14px"
 $font-size-lg:                $font-size-base * 1.286; // 18px
 $font-size-sm:                $font-size-base * .875;
+$font-size-md:                1.143rem; // 16px
 
 $font-weight-lighter:         lighter;
 $font-weight-light:           300;
@@ -911,25 +912,25 @@ $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x
 
 // Pagination
 
-$pagination-padding-y:              .5rem;
-$pagination-padding-x:              .75rem;
+$pagination-padding-y:              .29rem;
+$pagination-padding-x:              .57rem;
 $pagination-padding-y-sm:           .25rem;
 $pagination-padding-x-sm:           .5rem;
 $pagination-padding-y-lg:           .75rem;
 $pagination-padding-x-lg:           1.5rem;
 $pagination-line-height:            1.25;
 
-$pagination-color:                  $link-color;
+$pagination-color:                  $black;
 $pagination-bg:                     $white;
-$pagination-border-width:           $border-width;
+$pagination-border-width:           0;
 $pagination-border-color:           $gray-300;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
 $pagination-focus-outline:          0;
 
-$pagination-hover-color:            $link-hover-color;
-$pagination-hover-bg:               $gray-200;
-$pagination-hover-border-color:     $gray-300;
+$pagination-hover-color:            $black;
+$pagination-hover-bg:               rgba($accent, .1);
+$pagination-hover-border-color:     $pagination-hover-bg;
 
 $pagination-active-color:           $component-active-color;
 $pagination-active-bg:              $component-active-bg;
@@ -939,6 +940,8 @@ $pagination-disabled-color:         $gray-90;
 $pagination-disabled-bg:            $white;
 $pagination-disabled-border-color:  $gray-300;
 
+$pagination-item-padding-x: 0.29rem;
+$pagination-link-border-radius: $border-radius-lg;
 
 // Jumbotron
 
@@ -948,14 +951,18 @@ $jumbotron-bg:                      $white;
 
 
 // Cards
-
+$card-padding-y: 1.5rem;
+$card-padding-x: 1.5rem;
+$card-margin-top: 1.7rem;
 $card-spacer-y:                     .75rem;
 $card-spacer-x:                     1.25rem;
-$card-border-width:                 $border-width;
-$card-border-radius:                $border-radius;
-$card-border-color:                 rgba($black, .125);
+$card-border-width:                 0;
+$card-border-radius:                $border-radius-lg;
+$card-border-color:                 transparent;
+$card-box-shadow:                   inset 0 0 0 0 $accent, 0 2px 8px rgba($black, .1);
+$card-hover-box-shadow:             inset 0 0 0 2px $accent, 0 2px 8px rgba($black, .1);
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
-$card-cap-bg:                       rgba($black, .03);
+$card-cap-bg:                       transparent;
 $card-cap-color:                    null;
 $card-height:                       null;
 $card-color:                        null;
@@ -970,6 +977,13 @@ $card-columns-count:                3;
 $card-columns-gap:                  1.25rem;
 $card-columns-margin:               $card-spacer-y;
 
+$card-components-margin-y: 1.14rem;
+$card-title-margin-bottom: 0;
+$card-title-color: $black;
+
+$card-footer-text-font-size: $font-size-base;
+$card-footer-text-line-height: 4.13;
+$card-footer-text-line-spacer-y: 0.29rem;
 
 // Tooltips
 
@@ -1384,3 +1398,11 @@ $tile-header-margin-bottom: 1rem;
 
 // Page
 $page-header-margin-bottom: 1.71rem;
+
+// Tags
+$tag-height: 2rem;
+$tag-padding-x: 0.86rem;
+$tag-line-height: $tag-height;
+$tag-border-radius: 22px;
+$tag-font-size: $font-size-base;
+$tag-font-weight: 500;

@@ -46,3 +46,12 @@
   -webkit-font-smoothing: antialiased;
   content: $content;
 }
+
+@mixin textOverflow($maxWidth: 100%, $value: ellipsis, $lineHeight: normal, $height: auto) {
+  max-width: $maxWidth;
+  overflow: hidden;
+  text-overflow: $value;
+  white-space: nowrap;
+  height: $height;
+  line-height: $lineHeight;
+}

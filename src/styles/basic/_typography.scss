@@ -33,3 +33,7 @@ h4,
     font-size: $font-size-sm;
   }
 }
+
+.text-overflow {
+  @include textOverflow();
+}
