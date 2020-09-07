@@ -1,1 +1,75 @@
-<p>idea-card-list works!</p>
+<header class="page-header">
+  <div class="container-width -xl">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4 col-lg-3">
+        <h2 class="page-title mb-0">
+          Ideas
+        </h2>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9 pt-5 pt-md-0">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-3 text-dark">
+            Kopā: 52
+          </div>
+          <div class="col-9 col-md-6 col-lg-3">
+            <ng-select [clearable]="false"
+                       [searchable]="false">
+              <ng-option *ngFor="let option of options"
+                         [value]="option.id">
+                {{option.name}}
+              </ng-option>
+            </ng-select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="container-width -xl">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="row">
+          <div class="col-6 col-md-12">
+            <div class="form-group">
+              <label class="form-label"
+                     for="district">
+                District
+              </label>
+              <ng-select [clearable]="false"
+                         [searchable]="false"
+                         labelForId="district"
+                         placeholder="Select an element">
+                <ng-option *ngFor="let district of districts"
+                           [value]="district.id">
+                           {{district.name}}
+                          </ng-option>
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-6 col-md-12">
+            <div class="form-group">
+              <label class="form-label"
+                     for="category">
+                Category
+              </label>
+              <ng-select [clearable]="false"
+                         [searchable]="false"
+                         labelForId="category"
+                         placeholder="Select an element">
+                <ng-option *ngFor="let category of categories"
+                           [value]="category.id">
+                           {{category.name}}
+                          </ng-option>
+              </ng-select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9 pt-5 pt-md-0">
+        Content
+      </div>
+    </div>
+  </div>
+</div>
