@@ -71,6 +71,7 @@ $colors: map-merge(
     "teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
+    'semi-white': $semi-white,
     "gray":       $gray-55,
     "gray-dark":  $base,
     "link":     $action
@@ -261,7 +262,7 @@ $max-widths: map-merge(
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12;
-$grid-gutter-width:           1rem;
+$grid-gutter-width:           1.5rem;
 $grid-row-columns:            6;
 
 
@@ -317,9 +318,9 @@ $line-height-sm:              1.5;
 $border-width:                1px;
 $border-color:                $gray-75;
 
-$border-radius:               .25rem;
-$border-radius-lg:            .3rem;
-$border-radius-sm:            .2rem;
+$border-radius:               .25rem; // 3.5px
+$border-radius-lg:            .286rem; // 4px
+$border-radius-sm:            .2rem; // 2.8px
 
 $rounded-pill:                50rem;
 
@@ -624,7 +625,7 @@ $form-check-input-margin-x:             .25rem;
 $form-check-inline-margin-x:            .75rem;
 $form-check-inline-input-margin-x:      .3125rem;
 
-$form-grid-gutter-width:                10px;
+$form-grid-gutter-width:                1rem;
 $form-group-margin-bottom:              1.5rem;
 
 $input-group-addon-color:               $input-color;
@@ -1370,3 +1371,13 @@ $radio-label-font-weight: $check-label-font-weight;
 $radio-label-line-height: $check-label-line-height;
 $radio-label-padding-left: $radio-input-size + $radio-input-margin-right;
 $radio-label-padding-top: calc( (#{$radio-input-size} / 2) - (#{$radio-label-font-size} * #{$radio-label-line-height} / 2) );
+
+// Article
+$article-title-margin-bottom: 1.79rem;
+
+// Tiles
+$tile-padding-top: 2rem;
+$tile-padding-x: 2rem;
+$tile-padding-bottom: 1rem;
+$tile-border-radius: $border-radius-lg;
+$tile-header-margin-bottom: 1rem;
