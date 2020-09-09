@@ -1,5 +1,29 @@
 .page {
   &-header {
     margin-bottom: $page-header-margin-bottom;
+
+    &_nav {
+      &-link {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        max-width: 100%;
+        font-size: $page-header-nav-link-font-size;
+
+        &_ico {
+          font-size: inherit;
+          flex-shrink: 0;
+        }
+
+        &_text {
+          display: inline-block;
+          @include textOverflow();
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }

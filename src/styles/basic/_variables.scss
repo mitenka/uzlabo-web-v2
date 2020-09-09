@@ -1398,6 +1398,7 @@ $tile-header-margin-bottom: 1rem;
 
 // Page
 $page-header-margin-bottom: 1.71rem;
+$page-header-nav-link-font-size: 1rem;
 
 // Tags
 $tag-height: 2rem;
@@ -1406,3 +1407,6 @@ $tag-line-height: $tag-height;
 $tag-border-radius: 22px;
 $tag-font-size: $font-size-base;
 $tag-font-weight: 500;
+
+// Gallery
+$gallery-image-ratio: 2/3;
