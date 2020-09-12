@@ -8,6 +8,23 @@ body {
   font-family: $font-family-base;
 }
 
+app-root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-width: $container-min-width;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  @include margin-x(auto);
+}
+
 .container-width {
   width: 100%;
   min-width: $container-min-width;

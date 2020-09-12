@@ -1,0 +1,10 @@
+.tile {
+  padding-top: $tile-padding-top;
+  @include padding-x($tile-padding-x);
+  padding-bottom: $tile-padding-bottom;
+  border-radius: $tile-border-radius;
+
+  &-header {
+    margin-bottom: $tile-header-margin-bottom;
+  }
+}

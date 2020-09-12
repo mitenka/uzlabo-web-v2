@@ -1,1 +1,355 @@
-<p>idea-card-list works!</p>
+<header class="page-header">
+  <div class="container-width -xl">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4 col-lg-3">
+        <h2 class="page-title mb-0">
+          Ideas
+        </h2>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9 pt-5 pt-md-0">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-3 text-dark">
+            Kopā: 52
+          </div>
+          <div class="col-9 col-md-6 col-lg-3">
+            <ng-select [clearable]="false"
+                       [searchable]="false"
+                       [(ngModel)]="showOption">
+              <ng-option *ngFor="let option of options"
+                         [value]="option.id">
+                {{option.name}}
+              </ng-option>
+            </ng-select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-content">
+  <div class="container-width -xl">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="row">
+          <div class="col-6 col-md-12">
+            <div class="form-group">
+              <label class="form-label"
+                     for="district">
+                District
+              </label>
+              <ng-select [clearable]="false"
+                         [searchable]="false"
+                         labelForId="district"
+                         placeholder="Select an element">
+                <ng-option *ngFor="let district of districts"
+                           [value]="district.id">
+                  {{district.name}}
+                </ng-option>
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-6 col-md-12">
+            <div class="form-group">
+              <label class="form-label"
+                     for="category">
+                Category
+              </label>
+              <ng-select [clearable]="false"
+                         [searchable]="false"
+                         labelForId="category"
+                         placeholder="Select an element">
+                <ng-option *ngFor="let category of categories"
+                           [value]="category.id">
+                  {{category.name}}
+                </ng-option>
+              </ng-select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9 pt-5 pt-md-0">
+
+        <a class="card"
+           href="#">
+          <div class="row">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-3 card-img_wrapper">
+              <img src="http://bino3d.com/wp-content/uploads/2017/12/Old-Riga-City-panorama.jpg"
+                   alt="Auto stāvvietas ielas malā"
+                   class="card-img" />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-9 pt-5 pt-sm-0 pt-md-5 pt-lg-0 card-container">
+              <div class="card-content">
+                <header class="card-header">
+                  <div class="row justify-content-between">
+                    <div class="col-12 col-md-9 col-lg-10">
+                      <h3 class="card-title">
+                        Auto stāvvietas ielas malā
+                      </h3>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 pt-4 pt-md-0">
+                      <div class="card-rating text-right">
+                        Votes
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="card-tags form-row">
+                  <div class="col-auto my-1">
+                    <div class="tag tag-accent">
+                      Satiksmes organizācija
+                    </div>
+                  </div>
+                  <div class="col-auto my-1">
+                    <div class="tag tag-primary">
+                      Auto satiksme
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <div class="row align-items-end">
+                  <div class="col-12 col-md-9 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow">
+                      Dzirnavu iela, Centra rajons, Rīga, Latvija
+                    </div>
+                    <div class="card-footer_text-line text-overflow">
+                      Pievienots: 12.03.2020 | Autors: Urzula
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 pt-5 pt-md-0 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow text-md-right">
+                      Comments: 0
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </a>
+
+        <a class="card"
+           href="#">
+          <div class="row">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-3 card-img_wrapper">
+              <img src="https://i.pinimg.com/originals/6c/c3/34/6cc33410ac76bfc2061ecba8be9a4fc5.jpg"
+                   alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                   class="card-img" />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-9 pt-5 pt-sm-0 pt-md-5 pt-lg-0 card-container">
+              <div class="card-content">
+                <header class="card-header">
+                  <div class="row justify-content-between">
+                    <div class="col-12 col-md-9 col-lg-10">
+                      <h3 class="card-title">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua
+                      </h3>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 pt-4 pt-md-0">
+                      <div class="card-rating text-right">
+                        Votes
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="card-tags form-row">
+                  <div class="col-auto my-1">
+                    <div class="tag tag-accent">
+                      Atpūta & infrastruktūra
+                    </div>
+                  </div>
+                  <div class="col-auto my-1">
+                    <div class="tag tag-primary">
+                      Kafejnīcas un tirdzniecības vietas
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <div class="row align-items-end">
+                  <div class="col-12 col-md-9 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow">
+                      Dzirnavu iela, Centra rajons, Rīga, Latvija
+                    </div>
+                    <div class="card-footer_text-line text-overflow">
+                      Pievienots: 12.03.2020 | Autors: Urzula
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 pt-5 pt-md-0 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow text-md-right">
+                      Comments: 10 235
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </a>
+
+        <a class="card"
+           href="#">
+          <div class="row">
+            <div class="col-12 col-sm-4 col-md-12 col-lg-3 card-img_wrapper">
+              <img src="https://cs01t.hobsta.com/00000/0001/2e1/aa68d_450sq.jpg"
+                   alt="Auto stāvvietas ielas malā"
+                   class="card-img" />
+            </div>
+            <div class="col-12 col-sm-8 col-md-12 col-lg-9 pt-5 pt-sm-0 pt-md-5 pt-lg-0 card-container">
+              <div class="card-content">
+                <header class="card-header">
+                  <div class="row justify-content-between">
+                    <div class="col-12 col-md-9 col-lg-10">
+                      <h3 class="card-title">
+                        Auto stāvvietas ielas malā
+                      </h3>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 pt-4 pt-md-0">
+                      <div class="card-rating text-right">
+                        Votes
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div class="card-tags form-row">
+                  <div class="col-auto my-1">
+                    <div class="tag tag-accent">
+                      Pilsētas ainava
+                    </div>
+                  </div>
+                  <div class="col-auto my-1">
+                    <div class="tag tag-primary">
+                      Koki, apstādījumi un zaļās zonas
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <div class="row align-items-end">
+                  <div class="col-12 col-md-9 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow">
+                      Dzirnavu iela, Centra rajons, Rīga, Latvija
+                    </div>
+                    <div class="card-footer_text-line text-overflow">
+                      Pievienots: 12.03.2020 | Autors: Urzula
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-3 pt-5 pt-md-0 card-footer_text text-dark">
+                    <div class="card-footer_text-line text-overflow text-md-right">
+                      Comments: 123
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-width -xl py-7">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <label class="form-label mb-0"
+                   for="showItems">
+              Show
+            </label>
+          </div>
+          <div class="col-auto">
+            <ng-select [clearable]="false"
+                       [searchable]="false"
+                       labelForId="showItems"
+                       [(ngModel)]="showItem">
+              <ng-option *ngFor="let item of items"
+                         [value]="item.id">
+                {{ item.name }}
+              </ng-option>
+            </ng-select>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8 col-lg-9 pt-5 pt-md-0">
+        <div class="row align-items-center justify-content-md-end pagination-wrapper">
+          <div class="col-auto text-dark">
+            1-{{showItem | json}} of 225
+          </div>
+          <div class="col-auto">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination mb-0">
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#"
+                     title="The first page">
+                    <span class="material-icons">
+                      first_page
+                    </span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#"
+                     title="Previous">
+                    <span class="material-icons">
+                      chevron_left
+                    </span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#">
+                    1
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#">
+                    2
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#">
+                    3
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#">
+                    4
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#">
+                    5
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#"
+                     title="Next">
+                    <span class="material-icons">
+                      chevron_right
+                    </span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link"
+                     href="#"
+                     title="The last page">
+                    <span class="material-icons">
+                      last_page
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.gallery {
+  &-item {
+    display: flex;
+    height: 0;
+    padding-top: $gallery-image-ratio * 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-img {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
